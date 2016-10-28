@@ -1,12 +1,11 @@
 (function () {
     'use strict';
-    var booksServices = angular.module('booksServices', ['ngResource']);
-
-    booksServices.factory('Books', ['$resource',
-      function ($resource) {
-          return $resource('http://localhost:15300/api/books/', {}, {
-              query: { method: 'GET', params: {}, isArray: true }
-          });
-      }]);
+    angular.module('booksServices', ['ngResource', 'config'])
+        .factory('Books', ['$resource', 'config',
+          function ($resource, config) {
+              return $resource(config.ApiBooksUrl, {}, {
+                  query: { method: 'GET', params: {}, isArray: true }
+              });
+          }]);
 
 })();
