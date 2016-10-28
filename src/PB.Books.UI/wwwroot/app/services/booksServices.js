@@ -4,7 +4,7 @@
 
     booksServices.factory('Books', ['$resource',
       function ($resource) {
-          return $resource('/api/books/', {}, {
+          return $resource('http://localhost:15300/api/books/', {}, {
               query: { method: 'GET', params: {}, isArray: true }
           });
       }]);
