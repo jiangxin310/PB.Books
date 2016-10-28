@@ -1,0 +1,22 @@
+﻿<div ng-controller="booksController">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Type</th>
+                <th>Date Published</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="book in books">
+                <td>{{book.title}}</td>
+                <td>{{book.author}}</td>
+                <td>{{book.type}}</td>
+                <td>{{book.datePublished|date:"dd/MM/yyyy"}}</td>
+                <td>${{book.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

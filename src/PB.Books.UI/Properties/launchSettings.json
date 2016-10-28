@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:15301/Books.html",
+      "applicationUrl": "http://localhost:15301/index.html",
       "sslPort": 0
     }
   },

@@ -1,6 +1,7 @@
 (function () {
     'use strict';
-    angular.module('booksApp')
+
+    angular.module('app')
         .controller('booksController', booksController);
 
     booksController.$inject = ['$scope', 'Books'];
