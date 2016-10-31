@@ -14,20 +14,21 @@
                     return keys;
                 }
             };
-        });    
+        });  
 
-    angular.module('app', ['ngResource', 'ngRoute', 'booksServices'])
+    angular.module('app', ['ngRoute', 'booksServices'])
         .config(function ($routeProvider, $locationProvider) {
             $routeProvider
-                .when('/', {
-                    templateUrl: 'app/views/home.html'
+                .when('/home', {
+                    templateUrl: 'partials/home.html',
+                    controller: 'homeController'
                 })
                 .when('/books', {
-                    templateUrl: 'app/views/books.html',
+                    templateUrl: 'partials/books.html',
                     controller: 'booksController'
                 })
                 .otherwise({
-                    redirectTo: '/'
+                    redirectTo: '/home'
                 });
         });
 })();
